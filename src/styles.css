@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: "segoe ui";
+}
+
+img {
+  height: auto;
+  border-radius: 10px;
+}
+
+.clear {
+  margin: 0;
+}
+
+.card h5 {
+  max-width: 300px;
+  display: inline-block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+  position: relative;
+  justify-self: center;
+  background: rgba(85, 85, 85, 0.384);
+  padding: 10px;
+  margin: 10px 0 10px 5px;
+  border-radius: 10px;
+}/*# sourceMappingURL=styles.css.map */

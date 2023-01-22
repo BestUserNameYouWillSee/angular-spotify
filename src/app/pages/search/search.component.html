@@ -1,1 +1,12 @@
-<p>search works!</p>
+<div class="search">
+  <input #term class="form-control" (keyup)="fetch(term.value)" placeholder="Search">
+  <div class="search-type">
+    type:
+    <mat-button-toggle-group>
+      <mat-button-toggle class="search-toggle">Artists</mat-button-toggle>
+      <mat-button-toggle class="search-toggle">Tracks</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</div>
+
+<app-cards [items]="artists"></app-cards>

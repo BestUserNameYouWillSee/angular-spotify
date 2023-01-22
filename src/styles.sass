@@ -1,13 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 $cardbackground: rgba(85, 85, 85, 0.384)
 $background-color: black
-$navbackground:rgba(43, 43, 43, 0.733)
+$navbackground: rgba(43, 43, 43, 0.733)
 $color: white
 $navbarcolor: #00000052
-$imageheight: auto
+$imageheight: 320px
 $gridhomecolumn: 1fr 1fr 1fr
 $border: 10px
 $font: "segoe ui"
+$icon-margin: calc(106px / 2 - 12px)
 
 body
   margin: 0
@@ -17,7 +18,6 @@ body
 
 img
   height: $imageheight
-  border-radius: $border
 
 .clear
   margin: 0
@@ -26,13 +26,13 @@ img
   max-width: 300px
   display: inline-block
 
-.card-text
-
 .grid
   display: grid
   grid-template-columns: $gridhomecolumn
 
 .card
+  width: 340px
+  height: 400px
   position: relative
   justify-self: center
   background: $cardbackground
@@ -40,79 +40,116 @@ img
   margin: 10px 0 10px 5px
   border-radius: $border
 
-// ------------------------------ navbar ------------------------------
-
 *
   box-sizing: border-box
-.nav
-  height: 120px
-  width: 100%
-  background-color: $navbackground
-  position: relative
-  & > .nav-header
-    display: inline
-    & > .nav-title
-      display: inline-block
-      font-size: 35px
-      color: rgb(255, 255, 255)
-      padding: 10px 10px 10px 10px
-      font-family: "Trirong", serif
-  & > .nav-btn
-    display: none
-    & > label
-      display: inline-block
-      width: 50px
-      height: 50px
-      padding: 13px
-      & > span
-        display: block
-        width: 25px
-        height: 10px
-        border-top: 2px solid #eee
-  & > .nav-links
-    display: inline
-    float: right
-    font-size: 18px
-    position: absolute
-    display: block
-    width: 100%
-    background-color: rgb(126, 125, 125)
-    height: 0px
-    transition: all 0.5s ease-out
-    overflow-y: hidden
-    top: 50px
-    left: 0px
-    & > a
-      margin-right: 6px
-      border-radius: 20px
-      display: inline-block
-      padding: 15px 12px 15px 15px
-      margin-top: 3px
-      text-decoration: none
-      color: white
-      display: block
-      width: 100%
-      &:hover
-        border-radius: 20px
-        padding: 10px 12px 10px 15px
-        transition: 0.5s ease-in
-        color: #fff
-    & > .active
-      color: #fff
-  & > #nav-check
-    display: none
-    &:not(:checked)
-      & ~ .nav-links
-        height: 0px
-    &:checked
-      & ~ .nav-links
-        height: calc(100vh - 50px)
-        overflow-y: auto
-@media(max-width&:600px)
-    .nav > .nav-btn
-      display: inline-block
-      position: absolute
-      right: 0px
-      top: 0px
-.nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label
-  background-color: rgba(43, 43, 43, 0.733)
+  color: $color
+  text-decoration: none
+  margin: 0
+  padding: 0
+
+.nav-container
+  height: 100%
+
+.nav-background
+  background: rgba(0,0,0,0.8)
+
+.logo-container
+  display: inline
+
+.logo
+  min-width: 70px
+  min-height: 21px
+  width: auto
+  height: 50px
+  margin: 25px
+
+.main
+  min-height: 89vh
+  background: $background-color
+
+.icon-container
+  display: inline
+  float: right
+
+.icon
+  transform: scale(2)
+  margin: $icon-margin 25px 14.5px 10px
+
+.large-icon
+  vertical-align: middle
+  margin: 0 10px 0 0
+  transform: scale(1.5)
+
+.button-container
+  margin-top: 10px
+  height: auto
+
+button
+  position: sticky
+  top: 0
+  width: 100px
+
+::-webkit-scrollbar
+  width: 5px
+  position: absolute
+
+::-webkit-scrollbar-track
+  background: rgba(250, 250, 250, 0.4)
+  border-radius: 10px
+
+::-webkit-scrollbar-thumb
+  background: rgba(226, 226, 226, 0.5)
+  border-radius: 10px
+
+::-webkit-scrollbar-thumb:hover
+  background: rgba(255, 255, 255, 0.8)
+
+.sidebar
+  padding: 15px 25px
+  height: 100%
+
+.sidebar-container
+  background: rgba(0,0,0,0.9)
+
+.search
+  display: flex
+  justify-content: center
+
+.form-control
+  background: rgba(255, 255, 255, 0.1)
+  margin-top: 20px
+  color: white
+  padding: 10px
+  border-radius: 5px
+  width: 50%
+  height: 30px
+
+.form-control:focus
+  background: #ffffff56
+
+.center
+  flex-direction: column
+  display: flex
+  justify-content: center
+
+.search-type
+  margin: 20px
+
+.search-toggle
+  padding: 2px
+  border-radius: 7px
+  margin-left: 10px
+  height: 30px
+  background: rgba(255,255,255,0.5)
+
+
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content
+  line-height: 30px
+
+.mat-button-toggle-checked
+  background: rgba(255,255,255,0.1)
+
+
+.artist-name
+  padding: 10px
+  font-size: 3rem

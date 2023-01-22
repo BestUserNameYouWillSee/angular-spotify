@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  spotyUrl: 'https://api.spotify.com/v1'
 };

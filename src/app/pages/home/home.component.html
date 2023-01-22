@@ -1,11 +1,1 @@
-<div class="grid">
-  <div class="card" *ngFor="let song of NewReleases">
-    <img class="" [src]="song.images[1].url" alt="..." />
-    <div class="card-text">
-      <h5 class="clear">{{song.name}}</h5>
-      <p class="clear">
-        <span class="clear" *ngFor="let artist of song.artists">{{artist.name}}</span>
-      </p>
-    </div>
-  </div>
-</div>
+<app-cards [items]="NewReleases"></app-cards>

@@ -1,18 +1,31 @@
-<div class="nav">
-  <input type="checkbox" id="nav-check" />
-  <div class="nav-header">
-    <div class="nav-title">IC</div>
-  </div>
-  <div class="nav-btn">
-    <label for="nav-check">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-  </div>
-
-  <div class="nav-links">
-  </div>
-
-
-
+<mat-sidenav-container class="nav-container">
+  <mat-sidenav class="sidebar-container nav-background" #sidebar mode="side" closed>
+    <div class="sidebar">
+      <div class="button-container">
+        <mat-icon class="large-icon home-icon">home</mat-icon>
+        <button mat-stroked-button routerLink="home" routerLinkActive="active"
+          ariaCurrentWhenActive="page">Home</button>
+      </div>
+      <div class="button-container">
+        <mat-icon class="large-icon search-icon">search</mat-icon>
+        <button mat-stroked-button routerLink="search" routerLinkActive="active"
+          ariaCurrentWhenActive="page">search</button>
+      </div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content class="nav-background content">
+    <div class="content">
+      <div class="navbar">
+        <div class="logo-container">
+          <img src="../../assets/images/Spotify_Logo_CMYK_White.png" class="logo" alt="logo">
+        </div>
+        <div class="icon-container">
+          <mat-icon class="icon" (click)="sidebar.toggle()">menu</mat-icon>
+        </div>
+      </div>
+      <div class="main">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

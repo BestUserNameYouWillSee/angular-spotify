@@ -13,3 +13,5 @@ Made a search page in which you can search for artists. You can't go to the spec
 
 # Problems
 you can't use the spotify API on firefox. I don't know the reason for this, but I'm guessing it's because it's blocked in localhost.
+
+You can't use the buttons next to the searchbar yet.

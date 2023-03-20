@@ -1,6 +1,6 @@
 import { Component, Input} from '@angular/core';
 import { Router } from '@angular/router';
-import { ArtistsComponent } from '../artists/artists.component';
+import { ArtistsComponent } from '../artist/artist.component';
 
 @Component({
   selector: 'app-cards',

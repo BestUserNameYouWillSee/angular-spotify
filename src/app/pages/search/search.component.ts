@@ -16,7 +16,7 @@ export class SearchComponent{
 
   fetch(term:string){
 
-    this.spotify.getArtist(term).subscribe((res:any)=>{
+    this.spotify.getArtists(term).subscribe((res:any)=>{
       this.artists=res.artists.items;
       console.log(this.artists);
     })

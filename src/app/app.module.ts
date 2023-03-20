@@ -10,12 +10,13 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ArtistsComponent } from './pages/artists/artists.component';
+import { ArtistsComponent } from './pages/artist/artist.component';
 import { SearchComponent } from './pages/search/search.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { CardsComponent } from './pages/cards/cards.component';
+import { LoadingComponent } from './pages/shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { CardsComponent } from './pages/cards/cards.component';
     NavbarComponent,
     NoimagePipe,
     CardsComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
